@@ -1,7 +1,7 @@
 package com.pet.smile
 
 import smile.clustering._
-import smile.plot._
+import smile.plot.swing._
 
 import scala.util.Random
 /**
@@ -15,6 +15,6 @@ object SampleSmile extends App {
 
   val r = data.map(p=> Array[Double](p, p%randomInt())).toArray
   val km = kmeans(r, 5,20, 5)
-  plot(km.centroids(),Range(1,6).toArray, '*', Palette.COLORS)
+  plot(km.centroids, '*')
 }
 
