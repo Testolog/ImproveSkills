@@ -4,13 +4,16 @@ version := "0.1"
 
 scalaVersion := "2.12.10"
 
-libraryDependencies += "org.apache.spark" %% "spark-core" % "2.4.4"
-libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.4.4"
-libraryDependencies += "org.apache.spark" %% "spark-hive" % "2.4.4"
+val sparkVersion = "2.4.4"
+libraryDependencies += "org.apache.spark" %% "spark-core" % sparkVersion
+libraryDependencies += "org.apache.spark" %% "spark-sql" % sparkVersion
+libraryDependencies += "org.apache.spark" %% "spark-hive" % sparkVersion
 
-libraryDependencies += "com.github.haifengl" % "smile-core" % "1.5.3"
-libraryDependencies += "com.github.haifengl" % "smile-plot" % "1.5.3"
-libraryDependencies += "com.github.haifengl" % "smile-math" % "1.5.3"
-libraryDependencies += "com.github.haifengl" %% "smile-scala" % "1.5.3"
+val smileVersion = "2.0.0"
+
+libraryDependencies += "com.github.haifengl" % "smile-core" % smileVersion
+libraryDependencies += "com.github.haifengl" % "smile-plot" % smileVersion
+libraryDependencies += "com.github.haifengl" % "smile-math" % smileVersion
+libraryDependencies += "com.github.haifengl" %% "smile-scala" % smileVersion
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.8" % Test
